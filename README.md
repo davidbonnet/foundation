@@ -1,6 +1,10 @@
 # Foundation
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/davidbonnet/foundation.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/davidbonnet/foundation.svg?branch=master)](https://travis-ci.org/davidbonnet/foundation)
+[![Coverage](https://codecov.io/gh/davidbonnet/foundation/branch/master/graph/badge.svg)](https://codecov.io/gh/davidbonnet/foundation)
+[![Dependency Status](https://david-dm.org/davidbonnet/foundation/status.svg)](https://david-dm.org/davidbonnet/foundation)
+[![DevDependency Status](https://david-dm.org/davidbonnet/foundation/dev-status.svg)](https://david-dm.org/davidbonnet/foundation?type=dev)
+[![Greenkeeper](https://badges.greenkeeper.io/davidbonnet/foundation.svg)](https://greenkeeper.io/)
 
 > 🏛 Base repository for building apps or libraries.
 
