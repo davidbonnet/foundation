@@ -6,7 +6,7 @@
 [![DevDependency Status](https://david-dm.org/davidbonnet/foundation/dev-status.svg)](https://david-dm.org/davidbonnet/foundation?type=dev)
 [![Greenkeeper](https://badges.greenkeeper.io/davidbonnet/foundation.svg)](https://greenkeeper.io/)
 
-> 🏛 Base repository for building apps or libraries.
+🏛 Base repository for building apps or libraries.
 
 ### Features
 
