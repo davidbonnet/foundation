@@ -20,10 +20,14 @@
 
 #### Development
 
-* `npm start [-- --port]`
-* `npm test [-- --watch]`
-* `npm run coverage:html`
-* `npm run coverage`
+* `npm start [--port]`
+* `npm start --test`
+
+#### Tests
+
+* `npm test`
+* `npm run eslint`
+* `npm run prettier`
 
 #### Production
 
@@ -32,7 +36,8 @@
 
 #### Publication
 
-* `npm run build:lib`
+* `npm run prepare`
+* `npm publish`
 
 ## IDE
 

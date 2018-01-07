@@ -1,4 +1,3 @@
-import 'babel-polyfill'
 import { createElement as $ } from 'react'
 import { render } from 'react-dom'
 import compose from 'recompose/compose'
