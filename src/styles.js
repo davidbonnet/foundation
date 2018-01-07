@@ -1,10 +1,11 @@
 import jss from 'jss'
 import preset from 'jss-preset-default'
-import compose from 'recompose/compose'
-import lifecycle from 'recompose/lifecycle'
-import setDisplayName from 'recompose/setDisplayName'
-import withPropsOnChange from 'recompose/withPropsOnChange'
-import assign from 'lodash/assign'
+import {
+  compose,
+  lifecycle,
+  setDisplayName,
+  withPropsOnChange,
+} from 'recompose'
 
 jss.setup(
   preset({
@@ -17,7 +18,7 @@ jss.setup(
 export function withStyles(styles) {
   return Component => {
     const displayName = `JSS(${Component.displayName ||
-      Component.name ||
+    Component.name /* istanbul ignore next */ ||
       'Component'})`
     const styleSheet = jss.createStyleSheet(styles)
     let instances = 0
@@ -25,11 +26,13 @@ export function withStyles(styles) {
       setDisplayName(displayName),
       lifecycle({
         componentWillMount() {
+          /* istanbul ignore else */
           if (!instances++) {
             styleSheet.attach()
           }
         },
         componentWillUnmount() {
+          /* istanbul ignore else */
           if (!--instances) {
             styleSheet.detach()
           }
@@ -39,7 +42,7 @@ export function withStyles(styles) {
         classes:
           classes == null
             ? styleSheet.classes
-            : assign({}, classes, styleSheet.classes),
+            : { ...classes, ...styleSheet.classes },
       })),
     )(Component)
   }

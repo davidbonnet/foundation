@@ -56,19 +56,22 @@ export const App = compose(
       $('button', { onClick: reset }, 'Reset'),
       $('button', { onClick: decrease }, '-'),
       $('button', { onClick: increase }, '+'),
-      counter,
+      $('span', null, counter),
     ),
   )
 })
 
+/* istanbul ignore next */
 function start(App) {
   render($(App), global.document.getElementById('main'))
 }
 
+/* istanbul ignore next */
 if (global.window) {
   start(App)
 }
 
+/* istanbul ignore next */
 if (module.hot) {
   module.hot.accept(function() {
     start(App)
