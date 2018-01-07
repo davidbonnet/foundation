@@ -1,8 +1,6 @@
 import { createElement as $ } from 'react'
 import { render } from 'react-dom'
-import compose from 'recompose/compose'
-import withState from 'recompose/withState'
-import withHandlers from 'recompose/withHandlers'
+import { compose, withState, withHandlers } from 'recompose'
 
 import { withStyles } from './styles'
 
