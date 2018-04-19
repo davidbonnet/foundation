@@ -30,7 +30,7 @@
     "lodash": "^4.17.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "recompose": "^0.26.0"
+    "recompose": "^0.27.0"
   },
   "devDependencies": {
     "@std/esm": "^0.19.1",
