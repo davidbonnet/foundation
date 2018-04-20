@@ -20,17 +20,17 @@
 
 ## Usage
 
-1. Clone this repository and rename it.
-2. `nvm install 8`
-3. `npm install`
-4. Make changes to files in `/src` and use scripts described below.
+1.  Clone this repository and rename it.
+2.  `nvm install 8`
+3.  `npm install`
+4.  Make changes to files in `/src` and use scripts described below.
 
 ### Scripts
 
 #### Development
 
-* `npm start [--port]`: Bundles the project app, starts the development server, and watches for changes.
-* `npm start --test`: Runs tests and watches for changes.
+* `npm run build:watch [--port]`: Bundles the project app, starts the development server, and watches for changes.
+* `npm run test:watch`: Runs tests and watches for changes.
 
 #### Tests
 

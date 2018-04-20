@@ -27,7 +27,6 @@ test('counter', assert => {
 
   decrement.props.onClick()
   assert.is(result.children[0], '0', 'decrements')
-
   decrement.props.onClick()
   assert.is(result.children[0], '-1', 'decrements')
 

@@ -3,6 +3,7 @@
 *.sublime-workspace
 .gitignore
 .npmignore
+.nvmrc
 .nyc_output
 .travis.yml
 coverage
