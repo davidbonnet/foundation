@@ -110,10 +110,7 @@
       "text"
     ]
   },
-  "@std/esm": {
-    "esm": "js",
-    "cjs": true
-  },
+  "esm": "auto",
   "babel": {
     "presets": [
       "env"
