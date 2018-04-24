@@ -9,8 +9,8 @@
     "build": "parcel build --public-url ./ src/index.html",
     "build:watch": "parcel src/index.html --port ${npm_config_port:-1234}",
     "prepare": "babel --out-dir lib --ignore tests src",
-    "test": "eslint src/ && prettier \"{src,scripts}/**/*.js\" --list-different && nyc --require esm ava",
-    "test:watch": "node --require esm node_modules/.bin/ava --watch",
+    "test": "eslint src/ && prettier \"{src,scripts}/**/*.js\" --list-different && nyc --require esm ava --no-power-assert",
+    "test:watch": "node --require esm node_modules/.bin/ava --no-power-assert --watch",
     "eslint": "eslint src/",
     "prettier": "prettier --write \"{src,scripts}/**/*.js\"",
     "prepush": "npm test"
