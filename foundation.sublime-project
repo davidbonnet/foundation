@@ -27,9 +27,7 @@
   "SublimeLinter": {
     "linters": {
       "eslint": {
-        "@disable": false,
-        "args": [],
-        "excludes": []
+        "disable": false
       }
     }
   }
