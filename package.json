@@ -13,7 +13,8 @@
     "test:watch": "node --require esm node_modules/.bin/ava --no-power-assert --watch",
     "eslint": "eslint src/",
     "prettier": "prettier --write \"{src,scripts}/**/*.js\"",
-    "prepush": "npm test"
+    "prepush": "npm test",
+    "release": "standard-version"
   },
   "keywords": [
     "boilerplate",
@@ -51,11 +52,12 @@
     "eslint-plugin-import": "^2.12.0",
     "esm": "^3.0.45",
     "husky": "^0.14.3",
-    "nyc": "^11.9.0",
+    "nyc": "^12.0.1",
     "parcel-bundler": "^1.8.1",
     "prettier": "^1.13.4",
     "react-test-renderer": "^16.4.0",
-    "serve-static": "^1.13.2"
+    "serve-static": "^1.13.2",
+    "standard-version": "^4.4.0"
   },
   "prettier": {
     "printWidth": 80,
