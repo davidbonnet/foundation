@@ -2,7 +2,6 @@ import jsConfig from "@eslint/js";
 import parser from "@typescript-eslint/parser";
 import prettierConfig from "eslint-config-prettier";
 import importPlugin from "eslint-plugin-import";
-import infernoPlugin from "eslint-plugin-inferno";
 import reactPlugin from "eslint-plugin-react";
 import sortkeysPlugin from "eslint-plugin-sort-keys";
 import tailwindcssPlugin from "eslint-plugin-tailwindcss";
@@ -34,7 +33,6 @@ export default [
     },
     plugins: {
       import: importPlugin,
-      inferno: infernoPlugin,
       react: reactPlugin,
       sortkeys: sortkeysPlugin,
       tailwindcss: tailwindcssPlugin,
@@ -94,7 +92,6 @@ export default [
           "newlines-between": "always",
         },
       ],
-      "inferno/jsx-props-class-name": ["error", "class"],
       "jest/no-deprecated-functions": "off",
       "line-comment-position": [
         "error",

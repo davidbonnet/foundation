@@ -6,11 +6,10 @@ import { App } from "./App.tsx";
 import { observeDarkMode } from "./tools.ts";
 
 import "./main.css";
+import { getGlobal } from "@nevoland/get-global";
 
 observeDarkMode((isDark) => {
-  document
-    .getElementsByTagName("body")[0]
-    .classList[isDark ? "add" : "remove"]("dark");
+  getGlobal().document?.body.classList[isDark ? "add" : "remove"]("dark");
 });
 
 render(<App />, document.getElementById("app")!);
