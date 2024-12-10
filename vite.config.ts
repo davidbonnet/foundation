@@ -7,6 +7,15 @@ import moduleList from "vite-plugin-module-list";
 export default defineConfig({
   build: {
     outDir: "dist/demo",
+    sourcemap: true,
+    reportCompressedSize: false,
+    rollupOptions: {
+      output: {
+        entryFileNames: "[hash].js",
+        chunkFileNames: "[hash].js",
+        assetFileNames: "[hash].[ext]",
+      },
+    },
   },
   clearScreen: false,
   plugins: [
