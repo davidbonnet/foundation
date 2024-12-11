@@ -5,17 +5,18 @@ import { defineConfig } from "vite";
 import moduleList from "vite-plugin-module-list";
 
 export default defineConfig({
+  base: "/",
   build: {
     outDir: "dist/demo",
-    sourcemap: true,
     reportCompressedSize: false,
     rollupOptions: {
       output: {
-        entryFileNames: "[hash].js",
-        chunkFileNames: "[hash].js",
         assetFileNames: "[hash].[ext]",
+        chunkFileNames: "[hash].js",
+        entryFileNames: "[hash].js",
       },
     },
+    sourcemap: true,
   },
   clearScreen: false,
   plugins: [
@@ -32,17 +33,19 @@ export default defineConfig({
         extension: "js",
         language: "ts",
       },
-      outputPath: resolve("src/components.ts"),
-      rootPath: resolve("src/components"),
+      outputPath: resolve("src/client/components.ts"),
+      rootPath: resolve("src/client/components"),
     }),
     moduleList({
       mode: {
         extension: "js",
         language: "ts",
       },
-      outputPath: resolve("src/tools.ts"),
-      rootPath: resolve("src/tools"),
+      outputPath: resolve("src/client/tools.ts"),
+      rootPath: resolve("src/client/tools"),
     }),
     preact(),
   ],
+  publicDir: "src/public",
+  root: "src/client",
 });
