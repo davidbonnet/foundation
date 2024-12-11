@@ -10,10 +10,10 @@ export default {
     tailwindcssNesting(),
     tailwindcss,
     autoprefixer,
-    process.env.NODE_ENV !== "production" &&
+    Deno.env.get("NODE_ENV") !== "production" &&
       pseudoClasses({
         restrictTo: [":hover", ":active", ":focus", ":focus-within"],
       }),
-    process.env.NODE_ENV === "production" && cssnano,
+    Deno.env.get("NODE_ENV") === "production" && cssnano,
   ].filter(Boolean),
 };

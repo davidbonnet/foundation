@@ -26,7 +26,7 @@
     "!doc/.nojekyll"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "deno run -A src/server/main.ts",
     "dev:test": "vitest --update",
     "test": "npm run lint && npm run format && vitest run",
     "build": "rm -rf dist; tsc --project tsconfig.package.json",
@@ -76,5 +76,9 @@
     "vite": "^5.4.11",
     "vite-plugin-module-list": "^2.2.2",
     "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "express": "^4.21.2"
   }
 }

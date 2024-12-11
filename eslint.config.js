@@ -12,7 +12,7 @@ import vitestPlugin from "eslint-plugin-vitest";
  */
 const GLOBAL_NAME_LIST = ["process", "console", "MediaQueryListEvent"];
 
-/** @type { import("eslint").Linter.FlatConfig[] } */
+/** @type { import("eslint").Linter.Config[] } */
 export default [
   {
     files: ["**/*.{js,ts,jsx,tsx}"],
@@ -114,6 +114,13 @@ export default [
       ],
       "no-param-reassign": "error",
       "no-redeclare": "off",
+      "no-restricted-syntax": [
+        "error",
+        {
+          message: "Enums are bad, please use string literals instead",
+          selector: "TSEnumDeclaration",
+        },
+      ],
       "no-sequences": "error",
       "no-unused-vars": "off",
       "no-var": "error",
