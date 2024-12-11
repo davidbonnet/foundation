@@ -51,9 +51,10 @@ Develop on the application:
 - `npm run dev`
 - `npm run dev:test` (or use dedicated Vitest plugin of your IDE)
 
-Build it:
+Build and run:
 
 - `npm run build:app`
+- `npm start`
 
 <!-- Delete end -->
 

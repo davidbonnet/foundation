@@ -27,10 +27,7 @@ async function main(
     app.use(vite.middlewares);
   }
 
-  app.listen(+port, hostname, () => {
-    // eslint-disable-next-line no-console
-    console.log(`Listening on ${hostname}:${port}`);
-  });
+  app.listen(+port, hostname);
 }
 
 main();
