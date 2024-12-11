@@ -12,6 +12,9 @@
   "[css]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "files.associations": {
+    "*.env": "properties"
+  },
   "vitest.commandLine": "npx vitest --update",
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "typescript.tsdk": "node_modules/typescript/lib",

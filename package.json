@@ -26,8 +26,8 @@
     "!doc/.nojekyll"
   ],
   "scripts": {
-    "dev": "NODE_ENV=development node --experimental-strip-types --watch-path=src/server src/server/main.ts",
-    "start": "NODE_ENV=production node --experimental-strip-types src/server/main.ts",
+    "dev": "npm run start -- --watch-path=src/server --env-file-if-exists=.development.env",
+    "start": "node --env-file=.env --experimental-strip-types --disable-warning=ExperimentalWarning src/server/main.ts",
     "dev:test": "vitest --update --root=./",
     "test": "npm run lint && npm run format && vitest run --root=./",
     "build:lib": "rm -rf dist; tsc --project tsconfig.package.json",

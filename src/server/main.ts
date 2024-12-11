@@ -2,8 +2,9 @@ import express from "express";
 import { createServer as createViteServer } from "vite";
 
 async function main(
-  port = process.env.PORT ?? 5173,
+  port = process.env.PORT ?? "5173",
   hostname = process.env.HOSTNAME ?? "",
+  production = process.env.NODE_ENV === "production",
 ) {
   const app = express();
 
@@ -13,7 +14,7 @@ async function main(
     });
   });
 
-  if (process.env.NODE_ENV === "production") {
+  if (production) {
     app.use(express.static("public"));
   } else {
     // eslint-disable-next-line no-console
