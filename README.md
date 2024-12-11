@@ -18,6 +18,43 @@
 - [Typedoc](https://typedoc.org)
 - [NVM](https://github.com/nvm-sh/nvm)
 
+### Setup
+
+- `nvm install`
+- `npm install`
+
+### Library mode
+
+Use the application to test your library:
+
+- `npm run dev`
+- `npm run dev:test` (or use dedicated Vitest plugin of your IDE)
+
+Build and publish the library:
+
+- `npm run build:lib`
+- Set the `private` property to `false` in [package.json](./package.json)
+- `npm run release:init`
+
+Release subsequent versions using either:
+
+- `npm run release:alpha`
+- `npm run release:beta`
+- `npm run release:patch`
+- `npm run release:minor`
+- `npm run release:major`
+
+### Application mode
+
+Develop on the application:
+
+- `npm run dev`
+- `npm run dev:test` (or use dedicated Vitest plugin of your IDE)
+
+Build it:
+
+- `npm run build:app`
+
 <!-- Delete end -->
 
 ### Features

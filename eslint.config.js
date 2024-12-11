@@ -16,7 +16,7 @@ const GLOBAL_NAME_LIST = ["process", "console", "MediaQueryListEvent"];
 export default [
   {
     files: ["**/*.{js,ts,jsx,tsx}"],
-    ignores: ["dist/**/*", "node_modules/**/*"],
+    ignores: ["dist/**/*", "public/**/*", "node_modules/**/*"],
     languageOptions: {
       globals: {
         ...((keyList) => Object.fromEntries(keyList.map((key) => [key, true])))(

@@ -1,10 +1,10 @@
-# Logs
+# Logs and build artefacts
 logs
 *.log
 npm-debug.log*
 node_modules
 dist
-dist-ssr
+public
 *.local
 
 # Editor directories and files
