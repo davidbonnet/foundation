@@ -7,6 +7,7 @@ import moduleList from "vite-plugin-module-list";
 export default defineConfig({
   base: "/",
   build: {
+    emptyOutDir: true,
     outDir: resolve("public"),
     reportCompressedSize: false,
     rollupOptions: {
